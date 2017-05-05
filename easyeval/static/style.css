@@ -1,0 +1,22 @@
+body {
+    color: #101010;
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+
+/* unvisited link */
+a:link {
+    color: #333;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: underline;
+}

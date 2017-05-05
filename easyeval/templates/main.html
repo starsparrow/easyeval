@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<title>EasyEval - Home</title>
+
+<h1>EasyEval - Home</h1>
+
+{% if not logged_in %}
+<h3>[ <a href="./login">You are not logged in! Click here to do that.</a> ]</h3>
+{% endif %}
+
+{% if logged_in %}
+<h3>Hello, {{ name }}! What would you like to do today?</h3>
+<p>[ <a href="./doeval">Give an evaluation ]</a></p>
+<p>[ <a href="./evalsbyme">View evaluations I've given ]</a></p>
+<p>[ <a href="./evalsonme">View evaluations others have given me</a> ]</p>
+<p>[ <a href="./create">Create a new evaluation form</a> ]</p>
+{% endif %}
+
+{% endblock %}
