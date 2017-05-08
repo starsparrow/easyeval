@@ -13,8 +13,11 @@ from easyeval import easyeval
 
 BASE_CAS_URL = 'https://cas.iu.edu/cas'
 
+
+# Helper functions
 def is_logged_in():
     return True if 'username' in session else False
+
 
 def get_evals(author, recipient, evaltype):
     '''Look stuff up in database and return it!'''
@@ -23,9 +26,9 @@ def get_evals(author, recipient, evaltype):
 
 def list_forms():
     '''Get a list of forms from the JSON'''
-    with app.open_resource('forms.json') as f:
-        data = json.load(f)
-        return [formid['title'] for formid in data[0]]
+    with app.open_resource('forms.json', mode='r') as f:
+        forms = json.load(f)[0]
+        return [forms[form]['title'] for form in forms]
 
 
 # URL ROUTING
@@ -72,9 +75,14 @@ def list_forms_to_preview():
 
 @app.route('/preview/<form>')
 def preview_eval(form):
-    return 'I am not implemented yet!'
+    if form in list_forms():
+        return render_template('formpreview.html', form=form)
+    else:
+        return render_template('formstopreview.html',
+                               forms=list_forms(),
+                               errors=['That form does not exist!']
+        )
         
-
 
 @app.route('/create')
 def create_new_eval():
@@ -98,4 +106,3 @@ def see_evals_by_me():
 @app.route('/evalsonme')
 def see_evals_on_me():
     return 'I am not implemented yet!'
-

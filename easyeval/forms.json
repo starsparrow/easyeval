@@ -1,17 +1,92 @@
 [{
 	"000": {
-		"title": "foo"
+		"title": "foo",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
 	},
 	"001": {
-		"title": "bar"
+		"title": "bar",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
 	},
 	"002": {
-		"title": "baz"
+		"title": "baz",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
 	},
 	"003": {
-		"title": "qux"
+		"title": "qux",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
 	},
 	"004": {
-		"title": "zat"
+		"title": "corge",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
+	},
+	"005": {
+		"title": "grault",
+		"fields": [{
+			"001": {
+				"label": "What is your favorite color?",
+				"type": "text",
+				"length": 32
+			},
+			"002": {
+				"label": "What is your quest?",
+				"type": "text",
+				"length": 64
+			}
+		}]
 	}
 }]
